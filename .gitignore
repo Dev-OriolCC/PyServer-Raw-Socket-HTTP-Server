@@ -1,0 +1,39 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Server runtime output (access/error logs from v0.5)
+logs/
+*.log
+
+# Local TLS keys and certificates (v0.8) — never commit private keys
+*.pem
+*.key
+*.crt
+
+# Local data (sqlite demo app, v0.7)
+*.sqlite3
+*.db
+
+# Packet captures can contain sensitive traffic; commit screenshots instead
+*.pcap
+*.pcapng
+
+# Secrets and local config overrides
+.env
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+CLAUDE.MD
