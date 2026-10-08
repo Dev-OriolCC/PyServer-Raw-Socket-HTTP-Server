@@ -1,5 +1,7 @@
 # PyServe — Raw-Socket HTTP Server in Python
 
+[![CI](https://github.com/Dev-OriolCC/PyServer-Raw-Socket-HTTP-Server/actions/workflows/ci.yml/badge.svg)](https://github.com/Dev-OriolCC/PyServer-Raw-Socket-HTTP-Server/actions/workflows/ci.yml)
+
 PyServe is an HTTP/1.1 server built from raw TCP sockets using **only the Python standard library**: no `http.server`, no frameworks, no third-party packages. It grows feature by feature through versioned milestones, and each feature teaches a real networking or HTTP concept.
 
 > **Status:** v0.0 — Project setup. The package runs, but the HTTP server arrives in **v0.1 — Hello, socket**.
@@ -96,6 +98,16 @@ PyServe 0.0.0: project setup complete. The HTTP server arrives in v0.1.
 ```
 
 > **Without a virtual environment:** on Windows, `py -3.12 -m pyserve` works too.
+
+### 4. Run the tests
+
+Tests use the standard library's `unittest`, so nothing needs to be installed:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+GitHub Actions runs the same command on every push and pull request (see [.github/workflows/ci.yml](.github/workflows/ci.yml)).
 
 ### Coming in v0.1 and later
 
