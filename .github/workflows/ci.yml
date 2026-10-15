@@ -1,0 +1,22 @@
+name: CI
+
+# Run on every push and pull request, on any branch.
+on: [push, pull_request]
+
+# Least privilege: CI only needs to read the code.
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"  # matches docs/decisions.md and the planned Docker image
+
+      # No `pip install` step: PyServe uses only the standard library.
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
